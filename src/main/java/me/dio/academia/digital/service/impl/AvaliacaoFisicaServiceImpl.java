@@ -16,46 +16,46 @@ import me.dio.academia.digital.service.IAvaliacaoFisicaService;
 @Service
 public class AvaliacaoFisicaServiceImpl implements IAvaliacaoFisicaService {
 
-	@Autowired
-	private AvaliacaoFisicaRepository avaliacaoFisicaRepository;
+  @Autowired
+  private AvaliacaoFisicaRepository avaliacaoFisicaRepository;
 
-	@Autowired
-	private AlunoRepository alunoRepository;
+  @Autowired
+  private AlunoRepository alunoRepository;
 
-	@Override
-	public AvaliacaoFisica create(AvaliacaoFisicaForm form) {
-		AvaliacaoFisica avaliacaoFisica = new AvaliacaoFisica();
-		Aluno aluno = alunoRepository.findById(form.getAlunoId()).get();
+  @Override
+  public AvaliacaoFisica create(AvaliacaoFisicaForm form) {
+    AvaliacaoFisica avaliacaoFisica = new AvaliacaoFisica();
+    Aluno aluno = alunoRepository.findById(form.getAlunoId()).get();
 
-		avaliacaoFisica.setAluno(aluno);
-		avaliacaoFisica.setPeso(form.getPeso());
-		avaliacaoFisica.setAltura(form.getAltura());
+    avaliacaoFisica.setAluno(aluno);
+    avaliacaoFisica.setPeso(form.getPeso());
+    avaliacaoFisica.setAltura(form.getAltura());
 
-		return avaliacaoFisicaRepository.save(avaliacaoFisica);
-	}
+    return avaliacaoFisicaRepository.save(avaliacaoFisica);
+  }
 
-	@Override
-	public AvaliacaoFisica get(Long id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+  @Override
+  public AvaliacaoFisica get(Long id) {
+    // TODO Auto-generated method stub
+    return null;
+  }
 
-	@Override
-	public List<AvaliacaoFisica> getAll() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+  @Override
+  public List<AvaliacaoFisica> getAll() {
+    // TODO Auto-generated method stub
+    return null;
+  }
 
-	@Override
-	public AvaliacaoFisica update(Long id, AvaliacaoFisicaUpdateForm formUpdate) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+  @Override
+  public AvaliacaoFisica update(Long id, AvaliacaoFisicaUpdateForm formUpdate) {
+    // TODO Auto-generated method stub
+    return null;
+  }
 
-	@Override
-	public void delete(Long id) {
-		// TODO Auto-generated method stub
+  @Override
+  public void delete(Long id) {
+    // TODO Auto-generated method stub
 
-	}
+  }
 
 }

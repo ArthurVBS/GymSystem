@@ -14,34 +14,34 @@ import java.util.List;
 @Service
 public class MatriculaServiceImpl implements IMatriculaService {
 
-    @Autowired
-    private MatriculaRepository matriculaRepository;
+  @Autowired
+  private MatriculaRepository matriculaRepository;
 
-    @Autowired
-    private AlunoRepository alunoRepository;
+  @Autowired
+  private AlunoRepository alunoRepository;
 
-    public MatriculaServiceImpl() {
-    }
+  public MatriculaServiceImpl() {
+  }
 
-    @Override
-    public Matricula create(MatriculaForm form) {
-        Matricula matricula = new Matricula();
-        Aluno aluno = alunoRepository.findById(form.getAlunoId()).get();
+  @Override
+  public Matricula create(MatriculaForm form) {
+    Matricula matricula = new Matricula();
+    Aluno aluno = alunoRepository.findById(form.getAlunoId()).get();
 
-        matricula.setAluno(aluno);
-        return matriculaRepository.save(matricula);
-    }
+    matricula.setAluno(aluno);
+    return matriculaRepository.save(matricula);
+  }
 
-    @Override
-    public Matricula get(Long id) {
-        return matriculaRepository.findById(id).get();
-    }
+  @Override
+  public Matricula get(Long id) {
+    return matriculaRepository.findById(id).get();
+  }
 
-    @Override
-    public List<Matricula> getAll() {
-        return matriculaRepository.findAll();
-    }
+  @Override
+  public List<Matricula> getAll() {
+    return matriculaRepository.findAll();
+  }
 
-    @Override
-    public void delete(Long id) {}
+  @Override
+  public void delete(Long id) {}
 }

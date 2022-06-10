@@ -15,47 +15,47 @@ import me.dio.academia.digital.service.IAlunoService;
 @Service
 public class AlunoServiceImpl implements IAlunoService {
 
-	@Autowired
-	private AlunoRepository repository;
+  @Autowired
+  private AlunoRepository repository;
 
-	@Override
-	public Aluno create(AlunoForm form) {
-		Aluno aluno = new Aluno();
-		aluno.setNome(form.getNome());
-		aluno.setCpf(form.getCpf());
-		aluno.setBairro(form.getBairro());
-		aluno.setDataDeNascimento(form.getDataDeNascimento());
+  @Override
+  public Aluno create(AlunoForm form) {
+    Aluno aluno = new Aluno();
+    aluno.setNome(form.getNome());
+    aluno.setCpf(form.getCpf());
+    aluno.setBairro(form.getBairro());
+    aluno.setDataDeNascimento(form.getDataDeNascimento());
 
-		return repository.save(aluno);
-	}
+    return repository.save(aluno);
+  }
 
-	@Override
-	public Aluno get(Long id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+  @Override
+  public Aluno get(Long id) {
+    // TODO Auto-generated method stub
+    return null;
+  }
 
-	@Override
-	public List<Aluno> getAll() {
-		return repository.findAll();
-	}
+  @Override
+  public List<Aluno> getAll() {
+    return repository.findAll();
+  }
 
-	@Override
-	public Aluno update(Long id, AlunoUpdateForm formUpdate) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+  @Override
+  public Aluno update(Long id, AlunoUpdateForm formUpdate) {
+    // TODO Auto-generated method stub
+    return null;
+  }
 
-	@Override
-	public void delete(Long id) {
-		// TODO Auto-generated method stub
-	}
+  @Override
+  public void delete(Long id) {
+    // TODO Auto-generated method stub
+  }
 
-	@Override
-	public List<AvaliacaoFisica> getAllAvaliacaoFisicaId(Long id) {
+  @Override
+  public List<AvaliacaoFisica> getAllAvaliacaoFisicaId(Long id) {
 
-		Aluno aluno = repository.findById(id).get();
+    Aluno aluno = repository.findById(id).get();
 
-		return aluno.getAvaliacoes();
-	}
+    return aluno.getAvaliacoes();
+  }
 }
