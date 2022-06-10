@@ -38,8 +38,13 @@ public class MatriculaServiceImpl implements IMatriculaService {
   }
 
   @Override
-  public List<Matricula> getAll() {
-    return matriculaRepository.findAll();
+  public List<Matricula> getAll(String bairro) {
+
+    if (bairro == null){
+      return matriculaRepository.findAll();
+    }
+
+    return matriculaRepository.findAlunosMatriculadosBairro(bairro);
   }
 
   @Override
