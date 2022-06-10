@@ -14,7 +14,7 @@ import me.dio.academia.digital.service.IAlunoService;
 
 @Service
 public class AlunoServiceImpl implements IAlunoService {
-	
+
 	@Autowired
 	private AlunoRepository repository;
 
@@ -25,7 +25,7 @@ public class AlunoServiceImpl implements IAlunoService {
 		aluno.setCpf(form.getCpf());
 		aluno.setBairro(form.getBairro());
 		aluno.setDataDeNascimento(form.getDataDeNascimento());
-		
+
 		return repository.save(aluno);
 	}
 
@@ -53,9 +53,9 @@ public class AlunoServiceImpl implements IAlunoService {
 
 	@Override
 	public List<AvaliacaoFisica> getAllAvaliacaoFisicaId(Long id) {
-		
+
 		Aluno aluno = repository.findById(id).get();
-		
+
 		return aluno.getAvaliacoes();
 	}
 }

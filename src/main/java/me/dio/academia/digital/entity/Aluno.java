@@ -28,69 +28,69 @@ import lombok.NoArgsConstructor;
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Aluno {
 
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
-  private String nome;
+	private String nome;
 
-  @Column(unique = true)
-  private String cpf;
+	@Column(unique = true)
+	private String cpf;
 
-  private String bairro;
-  
-  private LocalDate dataDeNascimento;
+	private String bairro;
 
-  @OneToMany(mappedBy = "aluno", fetch = FetchType.LAZY)
-  @JsonIgnore
-  private List<AvaliacaoFisica> avaliacoes = new ArrayList<>();
+	private LocalDate dataDeNascimento;
 
-public Long getId() {
-	return id;
-}
+	@OneToMany(mappedBy = "aluno", fetch = FetchType.LAZY)
+	@JsonIgnore
+	private List<AvaliacaoFisica> avaliacoes = new ArrayList<>();
 
-public void setId(Long id) {
-	this.id = id;
-}
+	public Long getId() {
+		return id;
+	}
 
-public String getNome() {
-	return nome;
-}
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-public void setNome(String nome) {
-	this.nome = nome;
-}
+	public String getNome() {
+		return nome;
+	}
 
-public String getCpf() {
-	return cpf;
-}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 
-public void setCpf(String cpf) {
-	this.cpf = cpf;
-}
+	public String getCpf() {
+		return cpf;
+	}
 
-public String getBairro() {
-	return bairro;
-}
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
 
-public void setBairro(String bairro) {
-	this.bairro = bairro;
-}
+	public String getBairro() {
+		return bairro;
+	}
 
-public LocalDate getDataDeNascimento() {
-	return dataDeNascimento;
-}
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
+	}
 
-public void setDataDeNascimento(LocalDate dataDeNascimento) {
-	this.dataDeNascimento = dataDeNascimento;
-}
+	public LocalDate getDataDeNascimento() {
+		return dataDeNascimento;
+	}
 
-public List<AvaliacaoFisica> getAvaliacoes() {
-	return avaliacoes;
-}
+	public void setDataDeNascimento(LocalDate dataDeNascimento) {
+		this.dataDeNascimento = dataDeNascimento;
+	}
 
-public void setAvaliacoes(List<AvaliacaoFisica> avaliacoes) {
-	this.avaliacoes = avaliacoes;
-}
+	public List<AvaliacaoFisica> getAvaliacoes() {
+		return avaliacoes;
+	}
+
+	public void setAvaliacoes(List<AvaliacaoFisica> avaliacoes) {
+		this.avaliacoes = avaliacoes;
+	}
 
 }

@@ -18,23 +18,23 @@ import me.dio.academia.digital.service.impl.AlunoServiceImpl;
 @RestController
 @RequestMapping("/alunos")
 public class AlunoController {
-	
+
 	@Autowired
 	private AlunoServiceImpl service;
-	
+
 	@GetMapping
 	public List<Aluno> getAll(){
-		return service.getAll();		
+		return service.getAll();
 	}
-	
+
 	@PostMapping
 	public Aluno create(@RequestBody AlunoForm form) {
 		return service.create(form);
 	}
-	
+
 	@GetMapping("/avaliacoes/{id}")
 	public List<AvaliacaoFisica> getAllAvaliacaoFisicaId(@PathVariable Long id) {
 		return service.getAllAvaliacaoFisicaId(id);
 	}
-	
+
 }

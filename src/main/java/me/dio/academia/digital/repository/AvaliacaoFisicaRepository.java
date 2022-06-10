@@ -7,5 +7,5 @@ import me.dio.academia.digital.entity.AvaliacaoFisica;
 
 @Repository
 public interface AvaliacaoFisicaRepository extends JpaRepository<AvaliacaoFisica, Long>{
-	
+
 }

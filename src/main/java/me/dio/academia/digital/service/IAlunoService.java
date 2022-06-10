@@ -42,6 +42,6 @@ public interface IAlunoService {
    * @param id - id do Aluno que será removido.
    */
   void delete(Long id);
-  
+
   List<AvaliacaoFisica> getAllAvaliacaoFisicaId(Long id);
 }

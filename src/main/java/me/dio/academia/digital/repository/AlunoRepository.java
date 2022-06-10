@@ -6,5 +6,5 @@ import me.dio.academia.digital.entity.Aluno;
 
 @Repository
 public interface AlunoRepository extends JpaRepository<Aluno, Long> {
-	
+
 }
