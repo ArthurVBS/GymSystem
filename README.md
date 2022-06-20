@@ -24,7 +24,7 @@
 
 ## 💻 Project status:
 
-- 🚧 Project in progress... 🛠️
+- Finished project ✔️
 
 ## 🛠 Technologies:
 
@@ -35,6 +35,7 @@
 ## 📝 Features:
 
 - [X] Make an API available on port 8090.
+- [X] Connect the backend to the database (PostgreSQL).
 
 ## ⚙️ Prerequisites:
 
