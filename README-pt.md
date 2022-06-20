@@ -24,7 +24,7 @@
 
 ## 💻 Situação do projeto:
 
-- 🚧 Projeto em andamento... 🛠️
+- Projeto finalizado ✔️
 
 ## 🛠 Tecnologias:
 
@@ -35,6 +35,7 @@
 ## 📝 Features:
 
 - [X] Disponibilizar uma API na porta 8090.
+- [X] Conectar o backend à base de dados (PostgreSQL).
 
 ## ⚙️ Pré-requisitos:
 
